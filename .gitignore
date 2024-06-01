@@ -1,1 +1,18 @@
-/node_modules
+node_modules/
+.expo/
+dist/
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+app-example/
+
+# macOS
+.DS_Store
+
+frontend/snippet-frontend/.gitignore
+frontend/snippet-backend/.gitignore
