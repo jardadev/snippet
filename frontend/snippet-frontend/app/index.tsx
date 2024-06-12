@@ -1,26 +1,27 @@
-import { Text, View } from "react-native";
-import AuthButtons from "@/components/auth/AuthButtons";
-import { useNavigation } from "expo-router";
-import { useEffect } from "react";
+import { Text, View, StyleSheet } from 'react-native';
+import { useNavigation } from 'expo-router';
+import { useEffect } from 'react';
 
 export default function Index() {
-  const navigation = useNavigation();
+	const navigation = useNavigation();
 
-  useEffect(() => {
-    navigation.setOptions({
-      headerShown: false,
-    });
-  }, [navigation]);
-  return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Welcome to the Expo Router example</Text>
-      <AuthButtons />
-    </View>
-  );
+	useEffect(() => {
+		navigation.setOptions({
+			headerShown: false,
+		});
+	}, [navigation]);
+	return (
+		<View style={styles.container}>
+			<Text style={{ fontSize: 60 }}>Welcome to Snippet</Text>
+		</View>
+	);
 }
+
+const styles = StyleSheet.create({
+	container: {
+		flex: 1,
+		justifyContent: 'center',
+		alignItems: 'center',
+		backgroundColor: '#0B2447',
+	},
+});
